@@ -1,0 +1,35 @@
+<h4>Servicios</h4>
+<mat-form-field appearance="fill">
+    <mat-label>Tipo de evento</mat-label>
+    <mat-select>
+      <mat-option value="uno">Concierto</mat-option>
+      <mat-option value="dos">Teatro</mat-option>
+      <mat-option value="tres">Feria</mat-option>
+      <mat-option value="cuatro">Conferencia</mat-option>
+      <mat-option value="cinco">Seminario</mat-option>
+      <mat-option value="seis">Evento Privado</mat-option>
+      <mat-option value="siete">Evento Deportivo</mat-option>
+      <mat-option value="ocho">Otro</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Ciudad</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Lugar tentativo</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre del organizador</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button color="primary">Cotizar</button>
